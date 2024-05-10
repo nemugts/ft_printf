@@ -5,7 +5,7 @@ ARRC = ar rcs
 RM		= rm -f
 LIBFT	= ./libft/	
 INCS	= ft_printf.h
-SRCS	= ft_printf.c put_c.c put_s.c put_p.c
+SRCS	= ft_printf.c put_c.c put_s.c put_p.c put_di.c put_u.c
 OBJS	= $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
