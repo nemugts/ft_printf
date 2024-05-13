@@ -1,7 +1,11 @@
 #include "ft_printf.h"
 
-static char *ulltoa(unsigned long long n)
-{
+// 仮定：以下の関数やマクロが定義されている
+// - ft_strlen
+// - ft_putchar_fd
+// - strdup, malloc, free などの標準ライブラリ関数
+
+static char *ulltoa(unsigned long long n) {
     char *str;
     int len = 0;
     unsigned long long tmp = n;
@@ -24,24 +28,24 @@ static char *ulltoa(unsigned long long n)
         str[len] = '0' + (n % 10);
         n /= 10;
     }
-
     return str;
 }
 
-void put_u(unsigned long long c, int *len)
-{
-	char *str;
+void put_u(unsigned int c, int *len) {
+    char *str;
     unsigned int i;
     unsigned int a;
 
-    a = 0;
     str = ulltoa(c);
+    if (str == NULL)
+        return;
     i = ft_strlen(str);
-	while(a != i)
-	{
-		ft_putchar_fd(str[a] , 1);
+    a = 0;
+    while (a < i)
+    {
+        ft_putchar_fd(str[a], 1);
         a++;
-		(*len)++;
-	}
+        (*len)++;
+    }
     free(str);
 }

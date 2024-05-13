@@ -19,6 +19,7 @@ void put_c(char c, int *len);
 void put_s(char *c, int *len);
 void put_p(void *ptr,int *len);
 void put_di(int	c, int *len);
-void put_u(unsigned long long c, int *len);
+void put_u(unsigned int c, int *len);
+void put_x(unsigned int c, int *len);
 
 #endif
