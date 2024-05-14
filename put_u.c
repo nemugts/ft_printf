@@ -1,17 +1,12 @@
 #include "ft_printf.h"
 
-// 仮定：以下の関数やマクロが定義されている
-// - ft_strlen
-// - ft_putchar_fd
-// - strdup, malloc, free などの標準ライブラリ関数
-
 static char *ulltoa(unsigned long long n) {
     char *str;
     int len = 0;
     unsigned long long tmp = n;
 
     if (n == 0)
-        return strdup("0");
+        return ft_strdup("0");
 
     while (tmp > 0) {
         len++;

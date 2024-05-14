@@ -15,6 +15,7 @@ typedef struct s_flag
 #include <stdarg.h>
 #include "libft/libft.h"
 
+int	ft_printf(const char *format, ...);
 void put_c(char c, int *len);
 void put_s(char *c, int *len);
 void put_p(void *ptr,int *len);

@@ -48,8 +48,8 @@ int	ft_printf(const char *format, ...)
 	return (len);
 }
 
-int	main(void)
-{
+// int	main(void)
+// {
 	// int az = 1;
 
 	// int c = ft_printf("%c\n", 'k');
@@ -57,9 +57,10 @@ int	main(void)
 	// c = printf("%c\n", 'k');
     // printf("%d\n", c);
 
-	// int s = ft_printf("%s\n", "nemu");
+	// char *a = NULL;
+	// int s = ft_printf("%s\n", a);
     // printf("%d\n", s);
-	// s = printf("%s\n", "nemu");
+	// s = printf("%s\n", a);
     // printf("%d\n", s);
 	
 	// int p = ft_printf("%p\n", &az);
@@ -82,8 +83,8 @@ int	main(void)
 	// x = printf("%x\n", -12);
     // printf("%d\n", x);
 
-	int per = ft_printf("%%\n");
-    printf("%d\n", per);
-	per = printf("%%\n");
-    printf("%d\n", per);
-}
+// 	int per = ft_printf("%%\n");
+//     printf("%d\n", per);
+// 	per = printf("%%\n");
+//     printf("%d\n", per);
+// }

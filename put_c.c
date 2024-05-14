@@ -2,6 +2,6 @@
 
 void put_c(char c, int *len)
 {
-    ft_putnbr_fd(c , 1);
+    ft_putchar_fd(c , 1);
 		(*len)++;
 }
