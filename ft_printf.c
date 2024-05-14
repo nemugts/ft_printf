@@ -14,6 +14,10 @@ void	analys(const char **format, va_list *args, /*t_list *flags,*/ int *len)
 		put_u(va_arg(*args, unsigned int), len);
 	else if (**format == 'x')
 		put_x(va_arg(*args, unsigned int), len);
+	else if (**format == 'X')
+		put_x2(va_arg(*args, unsigned int), len);
+	else if (**format == '%')
+		put_per(len);
 }
 
 int	ft_printf(const char *format, ...)
@@ -73,8 +77,13 @@ int	main(void)
 	// u = printf("%u\n", -12);
     // printf("%d\n", u);
 
-	int x = ft_printf("%x\n", -12);
-    printf("%d\n", x);
-	x = printf("%x\n", -12);
-    printf("%d\n", x);
+	// int x = ft_printf("%x\n", -12);
+    // printf("%d\n", x);
+	// x = printf("%x\n", -12);
+    // printf("%d\n", x);
+
+	int per = ft_printf("%%\n");
+    printf("%d\n", per);
+	per = printf("%%\n");
+    printf("%d\n", per);
 }

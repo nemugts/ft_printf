@@ -21,5 +21,7 @@ void put_p(void *ptr,int *len);
 void put_di(int	c, int *len);
 void put_u(unsigned int c, int *len);
 void put_x(unsigned int c, int *len);
+void put_x2(unsigned int c, int *len);
+void put_per(int *len);
 
 #endif
