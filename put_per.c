@@ -1,7 +1,9 @@
 #include "ft_printf.h"
 
-void put_per(int *len)
+int put_per(unsigned int *len)
 {
-    ft_putchar_fd('%' , 1);
+    if (ft_putchar_fd_2('%', 1) == -1)
+      	return -1;
 		(*len)++;
+    return (1);
 }

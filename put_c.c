@@ -1,7 +1,12 @@
 #include "ft_printf.h"
 
-void put_c(char c, int *len)
+int put_c(char c, unsigned int *len)
 {
-    ft_putchar_fd(c , 1);
+    // ft_putchar_fd(c , 1);
+    if (ft_putchar_fd_2(c, 1) == -1)
+    {
+      return -1;
+		}
 		(*len)++;
+    return (1);
 }

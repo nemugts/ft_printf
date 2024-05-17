@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void	put_x(unsigned int c, int *len)
+int	put_x(unsigned int c, unsigned int *len)
 {
 	unsigned long long	address;
 	char				hex[20];
@@ -24,7 +24,10 @@ void	put_x(unsigned int c, int *len)
 	while (i-- > 0)
 	{
 		hex[i] = ft_tolower(hex[i]);
-		ft_putchar_fd(hex[i], 1);
+		// ft_putchar_fd(hex[i], 1);
+		if (ft_putchar_fd_2(hex[i], 1) == -1)
+      		return -1;
 		(*len)++;
 	}
+	return 1;
 }

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void	put_x2(unsigned int c, int *len)
+int	put_x2(unsigned int c, unsigned int *len)
 {
 	unsigned long long	address;
 	char				hex[20];
@@ -23,7 +23,10 @@ void	put_x2(unsigned int c, int *len)
 	hex[i] = '\0';
 	while (i-- > 0)
 	{
-		ft_putchar_fd(hex[i], 1);
+		// ft_putchar_fd(hex[i], 1);
+		if (ft_putchar_fd_2(hex[i], 1) == -1)
+      		return -1;
 		(*len)++;
 	}
+	return 1;
 }
