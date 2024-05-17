@@ -17,7 +17,6 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 # bonus: all
-	
 
 .c.o: $(OBJS)
 	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
